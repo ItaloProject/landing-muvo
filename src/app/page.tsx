@@ -1,3 +1,4 @@
+import Image from "next/image";
 import Link from "next/link";
 
 /* ── ícones inline ─────────────────────────────────────────── */
@@ -159,9 +160,14 @@ export default function Home() {
     <div className="min-h-screen noise">
       {/* ── nav ── */}
       <header className="fixed top-0 inset-x-0 z-50 flex items-center justify-between px-6 md:px-12 h-14 border-b border-white/[0.06] backdrop-blur-md bg-[#0c0c0c]/80">
-        <span className="text-sm font-semibold tracking-tight text-white select-none">
-          MUVO
-        </span>
+        <Image
+          src="/brand/muvo-lockup-dark.png"
+          alt="MUVO"
+          width={96}
+          height={36}
+          className="h-9 w-auto object-contain"
+          priority
+        />
         <nav className="hidden md:flex items-center gap-6 text-xs text-white/50">
           <a href="#produtos" className="hover:text-white transition-colors">Produtos</a>
           <a href="#sobre" className="hover:text-white transition-colors">Sobre</a>
@@ -184,7 +190,19 @@ export default function Home() {
           style={{ background: "radial-gradient(ellipse, #10b981 0%, transparent 70%)" }}
         />
 
-        <div className="animate-fade-in">
+        {/* mascote flutuante */}
+        <div className="animate-fade-in animate-float mb-2">
+          <Image
+            src="/logo.png"
+            alt="Mascote MUVO"
+            width={80}
+            height={80}
+            className="h-20 w-auto object-contain drop-shadow-[0_0_24px_rgba(16,185,129,0.35)]"
+            priority
+          />
+        </div>
+
+        <div className="animate-fade-in delay-100">
           <span className="inline-flex items-center gap-2 rounded-full border border-emerald-500/30 bg-emerald-500/10 px-4 py-1.5 text-xs font-medium text-emerald-400 mb-8">
             <span className="h-1.5 w-1.5 rounded-full bg-emerald-400 animate-pulse" />
             Plataforma em constante evolução
@@ -347,6 +365,15 @@ export default function Home() {
           >
             <div className="absolute inset-0 pointer-events-none" style={{ background: "radial-gradient(ellipse 70% 50% at 50% 0%, rgba(16,185,129,0.08) 0%, transparent 70%)" }} />
             <div className="relative">
+              <div className="flex justify-center mb-6">
+                <Image
+                  src="/logo.png"
+                  alt="MUVO"
+                  width={56}
+                  height={56}
+                  className="h-14 w-auto object-contain opacity-80"
+                />
+              </div>
               <p className="text-xs font-medium text-emerald-400 uppercase tracking-widest mb-4">Sobre o MUVO</p>
               <h2 className="text-2xl md:text-3xl font-bold text-white mb-6 max-w-2xl mx-auto leading-tight">
                 Tecnologia acessível para quem quer crescer.
@@ -383,7 +410,13 @@ export default function Home() {
       <footer className="border-t border-white/5 px-6 md:px-12 py-10">
         <div className="max-w-5xl mx-auto flex flex-col md:flex-row items-center justify-between gap-6">
           <div className="flex items-center gap-3">
-            <span className="text-sm font-bold text-white">MUVO</span>
+            <Image
+              src="/brand/muvo-lockup-dark.png"
+              alt="MUVO"
+              width={72}
+              height={28}
+              className="h-7 w-auto object-contain opacity-70"
+            />
             <span className="text-white/20 text-xs">·</span>
             <span className="text-xs text-white/30">
               © {new Date().getFullYear()} Todos os direitos reservados.
