@@ -118,8 +118,8 @@ export default function Home() {
             </h1>
 
             <p className="animate-fade-up delay-200 mt-6 max-w-xl text-balance text-base leading-relaxed text-white/55 md:text-lg">
-              Do controle financeiro pessoal à gestão de restaurantes — o MUVO
-              reúne soluções práticas para você e para o seu negócio crescerem.
+              O MUVO é uma marca com várias ferramentas práticas para você e
+              para o seu negócio crescerem. Comece pelo que você precisa hoje.
             </p>
 
             <div className="animate-fade-up delay-300 mt-10 flex flex-col items-center gap-3 sm:flex-row">
@@ -265,7 +265,7 @@ export default function Home() {
           <div className="rounded-2xl border border-white/10 bg-white/[0.03] px-8 py-8 md:px-12 flex flex-col md:flex-row md:items-center md:justify-between gap-4 text-center md:text-left">
             <h3 className="text-lg font-bold text-white">Mais soluções chegando</h3>
             <p className="text-sm text-white/55 leading-relaxed max-w-md">
-              Controle de estoque, CRM simples e gestão de fornecedores estão a caminho.
+              MUVO Concursos está a caminho, junto de controle de estoque, CRM simples e gestão de fornecedores.
             </p>
           </div>
         </div>
@@ -294,8 +294,8 @@ export default function Home() {
               </h2>
               <p className="text-sm text-white/50 leading-relaxed max-w-xl mx-auto mb-10">
                 O MUVO nasceu da necessidade de ter ferramentas simples, bonitas e que realmente
-                funcionem. Cada produto é desenvolvido com foco no usuário final — seja você
-                controlando suas finanças ou gerenciando o seu restaurante.
+                funcionem. Cada produto é desenvolvido com foco em quem vai usá-lo, e a
+                família de ferramentas do MUVO continua crescendo.
               </p>
               <div className="flex flex-col sm:flex-row items-center justify-center gap-3">
                 <a

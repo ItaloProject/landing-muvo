@@ -18,7 +18,7 @@ const display = Funnel_Display({
 export const metadata: Metadata = {
   title: "MUVO — Ferramentas que movem o seu negócio",
   description:
-    "Plataforma completa de gestão financeira pessoal e soluções para restaurantes. Simplifique, controle e cresça com o MUVO.",
+    "Uma marca com várias ferramentas práticas para você e para o seu negócio: gestão financeira, restaurantes e muito mais. Simplifique, controle e cresça com o MUVO.",
   metadataBase: new URL("https://muvo.com.br"),
   openGraph: {
     title: "MUVO — Ferramentas que movem o seu negócio",
