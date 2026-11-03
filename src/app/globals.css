@@ -55,8 +55,8 @@ h3 {
   }
 }
 
-/* poster estático só para quem prefere menos movimento, no desktop */
-@media (prefers-reduced-motion: reduce) and (min-width: 768px) {
+/* poster estático só para quem prefere menos movimento */
+@media (prefers-reduced-motion: reduce) {
   .hero-poster {
     display: block;
   }

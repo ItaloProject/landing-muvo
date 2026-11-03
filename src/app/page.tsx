@@ -109,52 +109,55 @@ export default function Home() {
       </header>
 
       {/* ── hero ── */}
-      <section className="relative isolate flex flex-col items-center text-center pt-36 pb-24 px-6 overflow-hidden">
-        {/* fundo: o poster aparece sempre; o vídeo em loop cobre por cima só no desktop */}
-        <div
-          className="hero-poster hidden absolute inset-0 -z-10 bg-cover bg-center opacity-45"
-          style={{ backgroundImage: "url(/hero/hero-poster.jpg)" }}
-        />
-        <video
-          className="hero-video absolute inset-0 -z-10 hidden h-full w-full object-cover object-top opacity-45 md:block"
-          src="/hero/hero.mp4"
-          poster="/hero/hero-poster.jpg"
-          autoPlay
-          muted
-          loop
-          playsInline
-          preload="metadata"
-          aria-hidden="true"
-        />
-        {/* véu escuro: mantém o texto legível sobre o rato */}
-        <div className="absolute inset-0 -z-10 bg-gradient-to-b from-[#0d0d0d]/80 via-[#0d0d0d]/70 to-[#0d0d0d]" />
+      <section className="relative overflow-hidden">
+        <div className="mx-auto grid min-h-[88svh] max-w-7xl content-center items-center gap-8 px-6 pb-16 pt-28 md:px-12 lg:grid-cols-[1fr_1.05fr] lg:gap-12">
+          {/* texto */}
+          <div className="flex flex-col items-center text-center lg:items-start lg:text-left">
+            <h1 className="animate-fade-up delay-100 max-w-2xl text-balance text-4xl font-bold leading-[1.1] tracking-tight text-white sm:text-5xl lg:text-6xl">
+              Ferramentas que movem o seu negócio.
+            </h1>
 
-        <h1 className="animate-fade-up delay-100 mt-8 max-w-3xl text-4xl md:text-6xl font-bold tracking-tight leading-[1.1] text-white">
-          Ferramentas que{" "}
-          movem{" "}
-          o seu negócio.
-        </h1>
+            <p className="animate-fade-up delay-200 mt-6 max-w-xl text-balance text-base leading-relaxed text-white/55 md:text-lg">
+              Do controle financeiro pessoal à gestão de restaurantes — o MUVO
+              reúne soluções práticas para você e para o seu negócio crescerem.
+            </p>
 
-        <p className="animate-fade-up delay-200 mt-6 max-w-xl text-balance text-base md:text-lg text-white/50 leading-relaxed">
-          Do controle financeiro pessoal à gestão de restaurantes — o MUVO
-          reúne soluções práticas para você e para o seu negócio crescerem.
-        </p>
+            <div className="animate-fade-up delay-300 mt-10 flex flex-col items-center gap-3 sm:flex-row">
+              <a
+                href="https://ibank-rho.vercel.app/comecar"
+                target="_blank"
+                rel="noopener noreferrer"
+                className="flex items-center gap-2 rounded-xl bg-[#f5f5f5] hover:bg-white text-[#0d0d0d] text-sm font-semibold px-6 py-3 transition-colors"
+              >
+                Começar com o Financeiro <IconArrow />
+              </a>
+              <a
+                href="#produtos"
+                className="flex items-center gap-2 rounded-xl border border-white/10 hover:border-white/20 bg-white/5 text-white text-sm font-medium px-6 py-3 transition-colors"
+              >
+                Ver produtos
+              </a>
+            </div>
+          </div>
 
-        <div className="animate-fade-up delay-300 mt-10 flex flex-col sm:flex-row items-center gap-3">
-          <a
-            href="https://ibank-rho.vercel.app/comecar"
-            target="_blank"
-            rel="noopener noreferrer"
-            className="flex items-center gap-2 rounded-xl bg-[#f5f5f5] hover:bg-white text-[#0d0d0d] text-sm font-semibold px-6 py-3 transition-colors"
-          >
-            Começar com o Financeiro <IconArrow />
-          </a>
-          <a
-            href="#produtos"
-            className="flex items-center gap-2 rounded-xl border border-white/10 hover:border-white/20 bg-white/5 text-white text-sm font-medium px-6 py-3 transition-colors"
-          >
-            Ver produtos
-          </a>
+          {/* vídeo do mascote: moldura própria, bordas esmaecidas para se fundir ao fundo */}
+          <div className="relative mx-auto aspect-video w-full max-w-2xl lg:max-w-none [-webkit-mask-image:radial-gradient(ellipse_at_center,black_40%,transparent_80%)] [mask-image:radial-gradient(ellipse_at_center,black_40%,transparent_80%)]">
+            <div
+              className="hero-poster hidden absolute inset-0 bg-cover bg-center"
+              style={{ backgroundImage: "url(/hero/hero-poster.jpg)" }}
+            />
+            <video
+              className="hero-video absolute inset-0 h-full w-full object-cover"
+              src="/hero/hero.mp4"
+              poster="/hero/hero-poster.jpg"
+              autoPlay
+              muted
+              loop
+              playsInline
+              preload="metadata"
+              aria-hidden="true"
+            />
+          </div>
         </div>
       </section>
 
