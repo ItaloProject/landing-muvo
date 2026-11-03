@@ -40,6 +40,7 @@ h3 {
   outline-offset: 3px;
 }
 
+/* movimento do hero fica no GSAP (HeroMedia); CSS só cobre reduced-motion */
 @media (prefers-reduced-motion: reduce) {
   *,
   *::before,
@@ -53,10 +54,7 @@ h3 {
   .hero-video {
     display: none;
   }
-}
 
-/* poster estático só para quem prefere menos movimento */
-@media (prefers-reduced-motion: reduce) {
   .hero-poster {
     display: block;
   }
