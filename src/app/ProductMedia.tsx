@@ -185,9 +185,10 @@ export default function ProductMedia({ label, delay, side, desktop, mobile }: Pr
         <div className="w-full animate-float" style={{ animationDelay: `${delay}s` }}>
           {/* zoom só com ponteiro fino (desktop); no toque o tap abre o lightbox */}
           <div
-            className={`group relative transition-transform duration-500 ease-out motion-reduce:transition-none md:hover:z-20 md:hover:scale-[1.3] motion-reduce:md:hover:scale-100 ${
-              side === "left" ? "origin-[25%_50%]" : "origin-center"
-            }`}
+            className={`group relative transition-transform duration-500 ease-out motion-reduce:transition-none md:hover:z-20 motion-reduce:md:hover:scale-100 ${
+              /* o telefone é alto (24rem): o card corta o que passa dele, então o zoom é menor que o da moldura do computador */
+              view === "desktop" ? "md:hover:scale-[1.3]" : "md:hover:scale-[1.15]"
+            } ${side === "left" ? "origin-[25%_50%]" : "origin-center"}`}
           >
             {view === "desktop" ? (
               <div className="overflow-hidden rounded-xl border border-white/10 bg-[#111] transition-shadow duration-500 shadow-[0_24px_48px_-16px_rgba(0,0,0,0.6)] group-hover:shadow-[0_40px_80px_-20px_rgba(0,0,0,0.9)]">
