@@ -1,6 +1,7 @@
-import type { Metadata } from "next";
+import type { Metadata, Viewport } from "next";
 import { DM_Sans, Funnel_Display } from "next/font/google";
 import "./globals.css";
+import { siteDescription, siteTitle, siteUrl } from "./site";
 
 /* mesmas fontes da identidade do Ibank: DM Sans no corpo, Funnel Display nos títulos */
 const body = DM_Sans({
@@ -16,17 +17,27 @@ const display = Funnel_Display({
 });
 
 export const metadata: Metadata = {
-  title: "MUVO — Ferramentas que movem o seu negócio",
-  description:
-    "Uma marca com várias ferramentas práticas para você e para o seu negócio: gestão financeira, restaurantes e muito mais. Simplifique, controle e cresça com o MUVO.",
-  metadataBase: new URL("https://muvo.com.br"),
+  title: siteTitle,
+  description: siteDescription,
+  metadataBase: new URL(siteUrl),
+  applicationName: "MUVO",
   openGraph: {
-    title: "MUVO — Ferramentas que movem o seu negócio",
-    description:
-      "Gestão financeira pessoal, controle para restaurantes e muito mais. Tudo em um lugar.",
+    title: siteTitle,
+    description: siteDescription,
+    siteName: "MUVO",
     type: "website",
     locale: "pt_BR",
+    url: "/",
   },
+  twitter: {
+    card: "summary_large_image",
+    title: siteTitle,
+    description: siteDescription,
+  },
+};
+
+export const viewport: Viewport = {
+  themeColor: "#0d0d0d",
 };
 
 export default function RootLayout({

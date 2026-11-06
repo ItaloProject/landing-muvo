@@ -6,7 +6,7 @@ type Props = {
   onEnded?: () => void;
 };
 
-/* fallback enquanto não existe public/hero/muvo.riv */
+/* fallback usado quando não existe public/hero/muvo-mascot.png */
 export default function HeroVideo({ onEnded }: Props) {
   const videoRef = useRef<HTMLVideoElement>(null);
 

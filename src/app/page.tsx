@@ -300,6 +300,7 @@ export default function Home() {
                         href={p.href}
                         target="_blank"
                         rel="noopener noreferrer"
+                        aria-label={`${p.cta} — ${p.label} (abre em nova aba)`}
                         className="inline-flex min-h-11 items-center gap-2 rounded-xl text-sm font-semibold px-5 text-black transition-colors hover:brightness-110"
                         style={{ background: p.accent }}
                       >
